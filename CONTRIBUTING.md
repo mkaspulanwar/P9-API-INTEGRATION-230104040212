@@ -2,7 +2,7 @@
 
 Terima kasih telah tertarik untuk berkontribusi pada proyek **P9-API-INTEGRATION-230104040212**!
 
-## 💡 Cara Berkontribusi
+## Cara Berkontribusi
 
 1.  **Fork** repositori ini ke akun GitHub Anda.
 2.  **Clone** repositori yang sudah Anda *fork* ke mesin lokal.
@@ -25,7 +25,7 @@ Terima kasih telah tertarik untuk berkontribusi pada proyek **P9-API-INTEGRATION
     ```
 6.  **Buka Pull Request (PR)** ke *branch* utama (`main` atau `master`) repositori ini.
 
-## 📌 Pedoman Umum
+## Pedoman Umum
 
 * Pastikan kode Anda mengikuti **Arsitektur Modular** (`routes`, `controllers`, `services`, dsb.) yang sudah ada.
 * Uji perubahan Anda secara lokal sebelum mengajukan PR.
