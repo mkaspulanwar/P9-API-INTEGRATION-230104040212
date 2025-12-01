@@ -1,6 +1,6 @@
 # P9-API-Integration-230104040212: Modular API Gateway (WSE)
 
-<center>
+<div align="center">
 
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
@@ -12,7 +12,7 @@
 [![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
 [![Browser](https://img.shields.io/badge/Browser-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.google.com/chrome/)
 
-</center>
+</div>
 
 
 ---
@@ -136,5 +136,6 @@ Server berjalan di `http://localhost:3000`. Pastikan semua *endpoint* mengembali
 * _Caching_ aktif (respons panggilan kedua lebih cepat).
 * _Error handler_ mengembalikan JSON rapi bila terjadi kegagalan.
 * _Swagger UI_ menampilkan dokumentasi *endpoint*.
+
 
 
