@@ -1,29 +1,45 @@
 # P9-API-Integration-230104040212: Modular API Gateway (WSE)
 
+<center>
+
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+[![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)](https://axios-http.com/)
+[![NodeCache](https://img.shields.io/badge/NodeCache-FFCC00?style=for-the-badge&logo=databricks&logoColor=black)](https://www.npmjs.com/package/node-cache)
+[![Morgan](https://img.shields.io/badge/Morgan-008000?style=for-the-badge&logo=logstash&logoColor=white)](https://www.npmjs.com/package/morgan)
 [![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)](https://swagger.io/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![Dotenv](https://img.shields.io/badge/Dotenv-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black)](https://github.com/motdotla/dotenv)
+[![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
+[![Browser](https://img.shields.io/badge/Browser-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.google.com/chrome/)
 
-## 📖 Deskripsi Praktikum
+</center>
 
-[cite_start]Repositori ini adalah hasil dari **Praktikum #9 Web Service Engineering** [cite: 1] [cite_start]yang berfokus pada pembangunan _API Gateway_ modular [cite: 7] [cite_start]menggunakan **Node.js** dan **Express**[cite: 38].
 
-[cite_start]Tujuan proyek ini adalah untuk mengintegrasikan dan mengelola panggilan ke dua API eksternal: **REST Countries** dan **OpenWeatherMap** [cite: 9, 10, 17][cite_start], dengan menerapkan struktur kode yang terorganisir, _caching_ untuk performa [cite: 18][cite_start], _logging_ [cite: 19][cite_start], _error handling_ [cite: 19][cite_start], dan dokumentasi interaktif **Swagger UI**[cite: 20].
+---
 
-## ✨ Fitur Utama
+## Deskripsi Praktikum
 
-[cite_start]Berdasarkan tujuan praktikum[cite: 15, 45], fitur-fitur yang diimplementasikan meliputi:
+Repositori ini adalah hasil dari **Praktikum #9 Web Service Engineering** yang berfokus pada pembangunan _API Gateway_ modular menggunakan **Node.js** dan **Express**.
 
-* [cite_start]**Arsitektur Modular** [cite: 16][cite_start]: Pemisahan kode yang ketat menjadi `routes`, `controllers`, `services`, `middleware`, `utils`, dan `docs`[cite: 27].
-* [cite_start]**API Integration (Countries)**[cite: 28]: Endpoint untuk mengambil semua negara, negara berdasarkan region, dan pencarian berdasarkan nama, dari REST Countries.
-* [cite_start]**API Integration (Weather)**[cite: 29]: Endpoint untuk mengambil data cuaca dari OpenWeatherMap menggunakan *API Key* dari variabel lingkungan (`.env`).
-* [cite_start]**Caching** [cite: 18][cite_start]: Menggunakan `node-cache` [cite: 40] [cite_start]untuk menyimpan respons API, memastikan panggilan kedua lebih cepat.
-* [cite_start]**Global Error Handling** [cite: 19][cite_start]: Middleware terpusat untuk menangani *error* dan mengembalikan respons JSON yang rapi dan konsisten (termasuk *error* 404/500)[cite: 344].
-* [cite_start]**Logging** [cite: 19][cite_start]: Menggunakan `morgan` [cite: 41] [cite_start]untuk memonitor setiap *request* yang masuk ke server[cite: 342].
-* [cite_start]**Dokumentasi API** [cite: 20][cite_start]: Menyajikan dokumentasi interaktif di `/docs` menggunakan **Swagger UI**[cite: 345].
+Tujuan proyek ini adalah untuk mengintegrasikan dan mengelola panggilan ke dua API eksternal: **REST Countries** dan **OpenWeatherMap**, dengan menerapkan struktur kode yang terorganisir, _caching_ untuk performa, _logging_, _error handling_, dan dokumentasi interaktif **Swagger UI**.
 
-## 📂 Struktur Proyek
+---
+
+## Fitur Utama
+
+Berdasarkan tujuan praktikum, fitur-fitur yang diimplementasikan meliputi:
+
+* **Arsitektur Modular**: Pemisahan kode yang ketat menjadi `routes`, `controllers`, `services`, `middleware`, `utils`, dan `docs`.
+* **API Integration (Countries)**: Endpoint untuk mengambil semua negara, negara berdasarkan region, dan pencarian berdasarkan nama, dari REST Countries.
+* **API Integration (Weather)**: Endpoint untuk mengambil data cuaca dari OpenWeatherMap menggunakan *API Key* dari variabel lingkungan (`.env`).
+* **Caching**: Menggunakan `node-cache` untuk menyimpan respons API, memastikan panggilan kedua lebih cepat.
+* **Global Error Handling**: Middleware terpusat untuk menangani *error* dan mengembalikan respons JSON yang rapi dan konsisten (termasuk *error* 404/500).
+* **Logging**: Menggunakan `morgan` untuk memonitor setiap *request* yang masuk ke server.
+* **Dokumentasi API**: Menyajikan dokumentasi interaktif di `/docs` menggunakan **Swagger UI**.
+
+---
+
+## Struktur Proyek
 
 ```bash
 P9-API-Integration-NimAnda/
@@ -51,7 +67,7 @@ P9-API-Integration-NimAnda/
 └── server.js                # File utama Express App & inisialisasi
 ```
 
-## ⚙️ Instalasi dan Setup
+## Instalasi dan Setup
 
 ### Prasyarat
 * **Node.js LTS** terpasang.
@@ -92,7 +108,7 @@ P9-API-Integration-NimAnda/
 
 ---
 
-## 🧪 Panduan Uji Coba Endpoint
+## Panduan Uji Coba Endpoint
 
 Server berjalan di `http://localhost:3000`. Pastikan semua *endpoint* mengembalikan status **200 OK** dan data yang benar.
 
@@ -111,3 +127,4 @@ Server berjalan di `http://localhost:3000`. Pastikan semua *endpoint* mengembali
 * _Caching_ aktif (respons panggilan kedua lebih cepat).
 * _Error handler_ mengembalikan JSON rapi bila terjadi kegagalan.
 * _Swagger UI_ menampilkan dokumentasi *endpoint*.
+
