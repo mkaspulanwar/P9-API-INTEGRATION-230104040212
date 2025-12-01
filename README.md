@@ -143,11 +143,12 @@ Ini adalah bukti *screenshot* dari pengujian semua *endpoint* yang telah diimple
 
 | Endpoint | Jalur (Path) | Screenshot |
 | :--- | :--- | :---: |
-| **Swagger UI** | `/docs` | <img src="./bukti/get_swagger_ui.png" alt="Swagger UI Documentation" width="300"> |
+| **Swagger UI** | `/docs` | <img src="./bukti/swagger_ui.png" alt="Swagger UI Documentation" width="300"> |
 | **Semua Negara** | `/api/countries` | <img src="./bukti/get_semua_negara.png" alt="GET All Countries" width="300"> |
 | **Region Asia** | `/api/countries/region/asia` | <img src="./bukti/get_region_asia.png" alt="GET Countries by Region" width="300"> |
 | **Negara Indonesia** | `/api/countries/name/indonesia` | <img src="./bukti/get_negara_indonesia.png" alt="GET Country by Name" width="300"> |
 | **Cuaca Kota** | `/api/weather?city=Palangkaraya` | <img src="./bukti/get_cuaca_kota.png" alt="GET Weather by City" width="300"> |
+
 
 
 
