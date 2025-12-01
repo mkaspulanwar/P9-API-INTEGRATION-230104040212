@@ -1,4 +1,4 @@
-# 🚀 P9-API-Integration-NimAnda: Modular API Gateway (WSE)
+# P9-API-Integration-230104040212: Modular API Gateway (WSE)
 
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
@@ -50,3 +50,64 @@ P9-API-Integration-NimAnda/
 ├── README.md
 └── server.js                # File utama Express App & inisialisasi
 ```
+
+## ⚙️ Instalasi dan Setup
+
+### Prasyarat
+* **Node.js LTS** terpasang.
+* Postman atau *browser* untuk uji *endpoint*.
+* Internet aktif (karena memanggil API eksternal).
+* **API Key OpenWeatherMap**: Diperlukan untuk layanan cuaca (`OWM_API_KEY`).
+
+### Langkah-langkah Instalasi
+
+1.  **Inisialisasi Proyek dan Instal Dependensi**:
+    ```bash
+    # Masuk ke folder proyek Anda
+    cd P9-API-Integration-NimAnda/
+
+    # Inisialisasi package.json dan instal dependensi utama
+    npm init -y
+    # express, axios, morgan, node-cache, swagger-ui-express, dotenv
+    npm install express axios morgan node-cache swagger-ui-express dotenv 
+    # Instal nodemon sebagai dev dependency untuk auto-restart
+    npm install nodemon --save-dev
+    ```
+
+2.  **Konfigurasi Variabel Lingkungan (.env)**:
+    Buat *file* `.env` di *root* proyek dan isikan `PORT` serta `OWM_API_KEY` Anda:
+    ```ini
+    # .env file
+    PORT=3000
+    OWM_API_KEY=API_KEY_ANDA_DARI_OPENWEATHERMAP
+    ```
+
+3.  **Jalankan Server**:
+    Pastikan Anda sudah menambahkan script ` "dev": "nodemon server.js"` di `package.json`.
+    ```bash
+    npm run dev
+    # Atau jika hanya menggunakan npm start:
+    # npm start
+    ```
+
+---
+
+## 🧪 Panduan Uji Coba Endpoint
+
+Server berjalan di `http://localhost:3000`. Pastikan semua *endpoint* mengembalikan status **200 OK** dan data yang benar.
+
+| No. | Deskripsi | Endpoint |
+| :--- | :--- | :--- |
+| 1. | **Dokumentasi Swagger UI** | `http://localhost:3000/docs` |
+| 2. | Ambil Semua Negara | `http://localhost:3000/api/countries` |
+| 3. | Ambil Negara Region Asia | `http://localhost:3000/api/countries/region/asia` |
+| 4. | Cari Negara Indonesia | `http://localhost:3000/api/countries/name/indonesia` |
+| 5. | Cuaca Kota (Opsional/Default) | `http://localhost:3000/api/weather` |
+| 6. | Cuaca Kota Tertentu | `http://localhost:3000/api/weather?city=Palangkaraya` |
+
+### Checklist Verifikasi
+* Struktur modular berjalan (`routes`/`controllers`/`services` terpisah).
+* _Logging_ (`morgan`) tampil di terminal untuk setiap *request*.
+* _Caching_ aktif (respons panggilan kedua lebih cepat).
+* _Error handler_ mengembalikan JSON rapi bila terjadi kegagalan.
+* _Swagger UI_ menampilkan dokumentasi *endpoint*.
